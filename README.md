@@ -5,6 +5,17 @@ Deep Reinforcement Learning - Multi Agent Tennis
 
 This repository contains a Deep Reinforcement learning agent based on DDPG algorithm. Two instances of this agent control rackets to bounce a ball over a net. The goal of the agents is to keep the ball in play for as many time steps as possible. The agent receives a reward of +0.1 if it hits the ball over the net. If the agent lets a ball hit the ground or hit the ball out of bounds, it receives a -0.01.
 
+## Environment
+In this environment the observation/state space has 24 variables corresponding to the position and velocity of the ball and racket. Each agent receives its own, local observation. Two continuous actions are available, corresponding to movement toward (or away from) the net, and jumping. The action space in continuous.
+
+The task is episodic. This means there is a distinct "done" state. In order to solve the environment, our agent must get an average of +0.5 reward over 100 consecutive episodes after taking the maximum over both agents.
+
+After each episode, we add up the rewards that each agent received (without discounting), to get a score for each agent. This yields 2 (potentially different) scores. We then take the maximum of these 2 scores. This yields a single score for each episode.
+
+We need avearage of this episode reward to be > 0.5 over 100 consecutive episodes.
+
+In tennis.ipnb we train a Maddpg agent to learn by interacting with this environment and solve it. The agent has no knowledge of the environment, the rules of the game or the reward structure. All it knows is are the observation and action space shape (size/type).
+
 ## Dependencies
 I developed code in this repository on a windows 10 64bit OS. So, I havent tested if this code works on any other OS.
 
@@ -19,6 +30,6 @@ Install the dependencies above.
 
 open a jupyter notebook.
 
-Run the notebook continuous_control.ipynb to train and test the agent. The notebook has instructions to load a saved model and to save a trained model.
+Run the notebook tennis.ipynb to train and test the agent. The notebook has instructions to load a saved model and to save a trained model.
 
 Refer to the Report.md for the approach used by the agent, training and evaluation.
