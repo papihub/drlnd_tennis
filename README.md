@@ -12,7 +12,7 @@ The task is episodic. This means there is a distinct "done" state. In order to s
 
 After each episode, we add up the rewards that each agent received (without discounting), to get a score for each agent. This yields 2 (potentially different) scores. We then take the maximum of these 2 scores. This yields a single score for each episode.
 
-We need avearage of this episode reward to be > 0.5 over 100 consecutive episodes.
+We need avearage of this episode reward to be > 0.5 over 100 consecutive episodes to successfully solve this environment.
 
 In tennis.ipnb we train a Maddpg agent to learn by interacting with this environment and solve it. The agent has no knowledge of the environment, the rules of the game or the reward structure. All it knows is are the observation and action space shape (size/type).
 
