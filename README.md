@@ -30,6 +30,6 @@ Install the dependencies above.
 
 open a jupyter notebook.
 
-Run the notebook tennis.ipynb to train and test the agent. The notebook has instructions to load a saved model and to save a trained model.
+Run the notebook Tennis.ipynb to train and test the agent. The notebook has instructions to load a saved model and to save a trained model.
 
 Refer to the Report.md for the approach used by the agent, training and evaluation.
